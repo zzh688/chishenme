@@ -10,7 +10,7 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'icons/icon.svg'],
+      includeAssets: ['icons/icon.jpg'],
       manifest: {
         name: '吃什么 - 饮食决策助手',
         short_name: '吃什么',
@@ -21,11 +21,11 @@ export default defineConfig({
         orientation: 'portrait',
         start_url: './',
         icons: [
-          { src: 'icons/icon.svg', sizes: '512x512', type: 'image/svg+xml', purpose: 'any' },
+          { src: 'icons/icon.jpg', sizes: '512x512', type: 'image/jpeg', purpose: 'any' },
         ],
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg}'],
+        globPatterns: ['**/*.{js,css,html,svg,jpg}'],
       },
     }),
   ],
