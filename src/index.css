@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* ===== 主题色变量 ===== */
+:root {
+  --bg-primary: #FAFAF5;
+  --bg-card: #FFFFFF;
+  --border-color: #E8E8E0;
+  --accent: #7DB892;
+  --accent-hover: #6AA87E;
+  --accent-light: #E8F5EC;
+  --text-primary: #333333;
+  --text-secondary: #888888;
+  --text-muted: #B0B0B0;
+  --danger: #E0746A;
+  --warning: #E0B86A;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* ===== 全局重置 ===== */
+* {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== 滚动条美化 ===== */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* ===== 安全区适配 ===== */
+.safe-bottom {
+  padding-bottom: var(--safe-bottom);
+}
+
+/* ===== 卡片按压反馈 ===== */
+.card-active:active {
+  transform: scale(0.98);
+  transition: transform 100ms ease;
+}
+
+@layer base {
+  input, textarea, select, button {
+    font-family: inherit;
+  }
+}
